@@ -1,0 +1,22 @@
+.footer {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 50px 10px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  opacity: 0.6;
+}
