@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+
 import { useState } from "react";
 import "./header.css";
 
@@ -48,7 +50,7 @@ const Header = () => {
 
       {/* Hamburger Menu Icon (Mobile) */}
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        {mobileMenuOpen ? <button>Menu</button> : <button>Close</button>}
+        {mobileMenuOpen ? <button>Close</button> : <button>Menu</button>}
       </div>
 
       {/* Mobile Menu */}

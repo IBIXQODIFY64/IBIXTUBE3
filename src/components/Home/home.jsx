@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import Header from "../Header/header";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const categories = ["Recent Release", "Action", "Kids", "Comedy", "Horror"];
 
@@ -32,7 +33,7 @@ const Home = () => {
           <p className="filter-title">Filter by Category</p>
           <ul className="filter-list">
             {categories.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
@@ -41,7 +42,7 @@ const Home = () => {
           <p className="filter-title">Filter by Rating</p>
           <ul className="filter-stars">
             {ratingList.map((item) => (
-              <li>{item.label}</li>
+              <li key={item.id}>{item.label}</li>
             ))}
           </ul>
         </div>
@@ -76,21 +77,7 @@ const Home = () => {
                       </Link>
 
                       <div className="rating-cont">
-                        <p className="rating">
-                          <FaStar /> {poster.rating}
-                        </p>
-
-                        {poster.isFavorite ? (
-                          <IoHeartSharp
-                            className="heart-icon"
-                            onClick={() => toggleFavorite(poster.id)}
-                          />
-                        ) : (
-                          <IoHeartOutline
-                            className="heart-icon"
-                            onClick={() => toggleFavorite(poster.id)}
-                          />
-                        )}
+                        <p className="rating">⭐ {poster.rating}</p>
                       </div>
                     </div>
                   ))}

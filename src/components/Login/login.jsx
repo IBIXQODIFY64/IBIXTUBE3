@@ -32,15 +32,11 @@ const Login = () => {
       body: JSON.stringify(userData),
     };
 
-    // const response = await fetch(
-    //   "https://ibixtubeserver.onrender.com/ibix/api/login",
-    //   options,
-    // );
-    //...
     const response = await fetch(
-      "http://localhost:4000/ibix/api/login",
+      "https://ibixtubeserver.onrender.com/ibix/api/login",
       options,
     );
+
     const result = await response.json();
 
     if (response.ok === true) {
