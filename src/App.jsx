@@ -5,6 +5,7 @@ import "./App.css";
 import NotFound from "./components/NotFound/notFound";
 import ShowDetails from "./components/ShowDetails/showDetails";
 import Favorites from "./components/Favorites/Favorites";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
@@ -12,9 +13,11 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<Home />} />
-        <Route path="/show-details/:posterId" element={<ShowDetails />} />
-        <Route path="/my-favorites" element={<Favorites />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/show-details/:posterId" element={<ShowDetails />} />
+          <Route path="/my-favorites" element={<Favorites />} />
+        </Route>
 
         <Route path="*" element={<NotFound />} />
       </Routes>

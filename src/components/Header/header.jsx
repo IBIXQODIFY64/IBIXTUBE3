@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import { useState } from "react";
@@ -6,9 +6,12 @@ import "./header.css";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     //write code here!
+    Cookies.remove("jwtToken");
+    navigate("/login");
   };
 
   const toggleMobileMenu = () => {
