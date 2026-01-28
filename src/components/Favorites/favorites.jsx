@@ -9,15 +9,7 @@ const MyFavorites = () => {
 
   const clearAll = () => {};
 
-  const removeFavorite = (id) => {
-    const data = JSON.parse(localStorage.getItem("posters")) || [];
-
-    const updated = data.map((item) =>
-      item.id === id ? { ...item, isFavorite: false } : item,
-    );
-
-    localStorage.setItem("posters", JSON.stringify(updated));
-    setFavList(updated.filter((item) => item.isFavorite));
+  const removeFavorite = () => {
   };
 
   return (
