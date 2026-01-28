@@ -56,6 +56,7 @@ const Home = () => {
           setApiStatus(APIStatus.FAILURE);
         }
       } catch (error) {
+        console.error(error);
         setApiStatus(APIStatus.FAILURE);
       }
     };

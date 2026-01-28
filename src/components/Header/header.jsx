@@ -53,7 +53,11 @@ const Header = () => {
 
       {/* Hamburger Menu Icon (Mobile) */}
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        {mobileMenuOpen ? <button>Close</button> : <button>Menu</button>}
+        {mobileMenuOpen ? (
+          <button className="toggle-menu-btn">Close</button>
+        ) : (
+          <button className="toggle-menu-btn">Menu</button>
+        )}
       </div>
 
       {/* Mobile Menu */}

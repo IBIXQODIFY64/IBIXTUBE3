@@ -65,32 +65,44 @@
   cursor: pointer;
 }
 
-/* MOBILE MENU */
 .mobile-nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #111;
-  width: 200px;
-  border-radius: 6px;
-  padding: 10px 0;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-nav li {
-  margin: 10px 0;
-  text-align: center;
+  display: none;
 }
 
 /* ===============================
    RESPONSIVE
 ================================ */
 @media (max-width: 767px) {
+  .toggle-menu-btn {
+    background-color: #e63c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    height: 28px;
+    width: 48px;
+  }
+  /* MOBILE MENU */
+  .mobile-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #111;
+    width: 200px;
+    border-radius: 6px;
+    padding: 10px 0;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    margin: 10px 0;
+    text-align: center;
+  }
   .header-opt {
     display: none;
   }
